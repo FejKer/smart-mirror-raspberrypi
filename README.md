@@ -1,5 +1,3 @@
-Here’s a polished and visually appealing markdown version of your notes, complete with headings, code blocks, image placeholders, and improved structure for readability.  
-
 ---
 
 # **🪞 Smart Mirror Project (Raspberry Pi)**
