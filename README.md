@@ -1,5 +1,3 @@
----
-
 # **🪞 Smart Mirror Project (Raspberry Pi)**
 > **A smart mirror project built using Raspberry Pi hardware.**
 
