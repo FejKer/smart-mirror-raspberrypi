@@ -1,0 +1,13 @@
+[Unit]
+Description=Run Chromium on system boot
+After=graphical.target
+
+[Service]
+User=admin
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/admin/.Xauthority
+ExecStart=/usr/bin/chromium-browser --kiosk http://localhost:8000
+Restart=always
+
+[Install]
+WantedBy=default.target
