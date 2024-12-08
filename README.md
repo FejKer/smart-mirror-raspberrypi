@@ -127,4 +127,59 @@ The following configuration entries can be set via the app or properties file:
 - **Service Notification:** Every configuration change triggers an event to notify other components to refresh data.  
 - **Restart Requirements:** If the Wi-Fi connection fails, a full restart of the Raspberry Pi may be required.  
 
+## **Optionally disable touch screen input**
+---
+
+### **1️⃣ Create a New udev Rule File**
+
+Run the following command to create a new udev rule file:
+
+```bash
+sudo nano /etc/udev/rules.d/99-touchscreen-disable.rules
+```
+
+---
+
+### **2️⃣ Add the Following Content to the File**
+
+Copy and paste the following line into the newly created file:
+
+```bash
+ACTION=="add|change", ATTRS{name}=="YOUR_TOUCHSCREEN_NAME", ENV{LIBINPUT_IGNORE_DEVICE}="1"
+```
+
+> **🔍 Note:** Replace `YOUR_TOUCHSCREEN_NAME` with the name of your touchscreen device.
+
+---
+
+### **3️⃣ Find the Name of Your Touchscreen Device**
+
+Run the following command to list input devices and find the name of your touchscreen:
+
+```bash
+cat /proc/bus/input/devices | grep -i "Name="
+```
+
+Look for the device name that matches your touchscreen.
+
+---
+
+### **4️⃣ Apply the Changes**
+
+Reload the udev rules using the command below:
+
+```bash
+sudo udevadm control --reload-rules
+```
+
+---
+
+### **5️⃣ Reboot the System**
+
+Finally, reboot your system to apply the changes:
+
+```bash
+sudo reboot
+```
+
 ---
