@@ -1,0 +1,126 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ipAddressLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editTextCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Wpisz miasto (bez polskich znaków)" />
+
+        <Button
+            android:id="@+id/deleteCityButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="location"
+            android:text="Usuń" />
+
+        <EditText
+            android:id="@+id/editTextTopics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Podaj tematy (oddzielone przecinkami)" />
+        <!--         <Spinner -->
+        <!--             android:id="@+id/spinnerLanguage" -->
+        <!--             android:layout_width="match_parent" -->
+        <!--             android:layout_height="wrap_content" /> -->
+        <Button
+            android:id="@+id/deleteTopicsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="news-categories"
+            android:text="Usuń" />
+
+        <EditText
+            android:id="@+id/editTextLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Język treści w formacie ISO" />
+
+        <Button
+            android:id="@+id/deleteLanguageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="news-language"
+            android:text="usuń" />
+
+        <EditText
+            android:id="@+id/editTextWifiName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nazwa WiFi" />
+
+        <Button
+            android:id="@+id/deleteSsidButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="wifi-ssid"
+            android:text="Usuń" />
+
+        <EditText
+            android:id="@+id/editTextWifiPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hasło WiFi"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/deletePasswordButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="wifi-password"
+            android:text="Usuń" />
+
+        <EditText
+            android:id="@+id/editTextWeatherApi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Klucz api weatherapi"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/deleteWeatherApiButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="weather-api-key"
+            android:text="Usuń" />
+
+        <EditText
+            android:id="@+id/editTextNewsApi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Klucz api newsapi"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/conntowifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Połącz do wifi" />
+
+        <Button
+            android:id="@+id/deleteNewsApiButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="news-api-key"
+            android:text="Usuń" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zapisz" />
+
+    </LinearLayout>
+</ScrollView>
