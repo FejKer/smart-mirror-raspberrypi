@@ -6,6 +6,10 @@
 ## **📋 Project Overview**
 This project transforms a Raspberry Pi into a functional smart mirror. The mirror displays weather, news, and other useful information. A dedicated Android mobile app can be used to configure and control the mirror.
 
+> ![Image](img/2.png)
+
+> ![Image](img/3.png)
+
 ---
 
 ## **🔧 Initial Setup**
@@ -69,9 +73,7 @@ admin ALL=(ALL) NOPASSWD: /usr/bin/nmcli
 
 ### **Option 2: Reverse Engineer the REST API**
 - Identify the available endpoints and control the service manually.  
-- Note that the service operates using an **H2 database** and a **properties file** created at runtime.  
-
-> 📸 **Image Placeholder**
+- Note that the service operates using an **H2 database** and a **properties file** created at runtime.
 
 ---
 
@@ -80,8 +82,6 @@ admin ALL=(ALL) NOPASSWD: /usr/bin/nmcli
 2. **Wi-Fi Connection:** Once Wi-Fi details (SSID and password) are configured, the Raspberry Pi attempts to connect.  
    - If Wi-Fi fails, it reverts to **hotspot mode**.  
    - No continuous connection check is performed, so a restart may be needed if the connection fails.  
-
-> 📸 **Image Placeholder**
 
 ---
 
@@ -98,7 +98,7 @@ The following configuration entries can be set via the app or properties file:
 | `news-language`   | `en`                  | Language for news articles.       |
 | `weather-api-key` | `some-key`            | API key for weather service.      |
 
-> 📸 **Image Placeholder**
+> ![Image](img/1.png)
 
 ---
 
@@ -109,16 +109,12 @@ The following configuration entries can be set via the app or properties file:
 | **Backend (Weather)** | Every 15 minutes | Pulls weather data from API.        |
 | **Backend (News)**    | Every 3 hours    | Pulls news updates from API.        |
 
-> 📸 **Image Placeholder** 
-
 ---
 
 ## **🔍 How Mobile App Detects Raspberry Pi**
 1. The app scans the local subnet (IP range `x.x.x.1` to `x.x.x.254`).  
 2. When the Raspberry Pi is detected, its IP address is displayed in the app.  
-3. Ensure **port 8080** is open for communication.  
-
-> 📸 **Image Placeholder**
+3. Ensure **port 8080** is open for communication.
 
 ---
 
